@@ -1,4 +1,5 @@
 import MobileHeader from "./components/MobileHeader";
+import AboutUsSection from "./components/sections/AboutUsSection";
 import HeroSection from "./components/sections/HeroSection";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
       <main className="relative">
          <MobileHeader />
          <HeroSection />
+         <AboutUsSection />
       </main>
    );
 }
