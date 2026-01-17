@@ -1,0 +1,96 @@
+import { LinkButton } from "../Buttons";
+import TextLineIcon from "../TextLineIcon";
+
+interface ServiceCardProps {
+   subtitle: string;
+   includesText: string;
+   iconURL: string;
+   titleComponent: React.ReactNode;
+   buttonURL: string;
+}
+
+function ServiceCard({
+   subtitle,
+   includesText,
+   iconURL,
+   titleComponent,
+   buttonURL
+}: ServiceCardProps) {
+   return (
+      <div className="shadow-2xl">
+         <div className="flex items-center gap-4 bg-hicea-purple p-4">
+            <img src={iconURL} alt={subtitle} className="size-12 object-contain" />
+            <h3 className="font-semibold text-white text-2xl">{subtitle}</h3>
+         </div>
+         <div className="bg-white p-8">
+            {titleComponent}
+
+            <div className="my-6">
+               <p className="font-semibold text-hicea-pink">Incluye:</p>
+               <p className="text-hicea-purple text-sm leading-tight">{includesText}</p>
+            </div>
+
+            <LinkButton
+               href={buttonURL}
+            >
+               Haz tu cita aquí
+            </LinkButton>
+         </div>
+      </div>
+   )
+}
+
+const serviceCards: ServiceCardProps[] = [
+   {
+      subtitle: "Chequeos ginecologicos",
+      includesText: "Exploración mamaria, papanicolaou, colposcopia, revisión de métodos anticonceptivos y detección de cáncer cervicouterino",
+      iconURL: "/assets/chequeos-ginecologicos.svg",
+      titleComponent: (
+         <div className="font-bold">
+            <p className="text-hicea-purple text-4xl leading-8">CHECK-UP</p>
+            <p className="text-hicea-pink text-3xl leading-8">GINECOLOGICO COMPLETO</p>
+            <p className="text-hicea-pink text-7xl">$499</p>
+         </div>
+      ),
+      buttonURL: "#"
+   },
+   {
+      subtitle: "Control prenatal",
+      includesText: "Exploración mamaria, papanicolaou, colposcopia, revisión de métodos anticonceptivos y detección de cáncer cervicouterino",
+      iconURL: "/assets/control-prenatal.svg",
+      titleComponent: (
+         <div className="font-bold">
+            <p className="text-hicea-purple text-4xl leading-8">CUIDA A TU BEBE</p>
+            <p className="text-hicea-pink text-4xl leading-8">DESDE EL EMBARAZO</p>
+         </div>
+      ),
+      buttonURL: "#"
+   },
+   {
+      subtitle: "Estudios de laboratorio",
+      includesText: "Exploración mamaria, papanicolaou, colposcopia, revisión de métodos anticonceptivos y detección de cáncer cervicouterino",
+      iconURL: "/assets/estudios.svg",
+      titleComponent: (
+         <div className="font-bold">
+            <p className="text-hicea-purple text-4xl leading-8">REALIZATE TUS</p>
+            <p className="text-hicea-pink text-4xl leading-8">ESTUDIOS MÉDICOS</p>
+         </div>
+      ),
+      buttonURL: "#"
+   },
+]
+
+export default function ServicesSection() {
+   return (
+      <div className="bg-linear-to-br from-hicea-pink to-hicea-purple p-6 w-full">
+         <TextLineIcon purple />
+         <h2 className="font-semibold text-white text-3xl">Conoce los servicios que tenemos para ti</h2>
+
+         <div className="space-y-8 p-4">
+            {serviceCards.map((service) => (
+               <ServiceCard key={service.subtitle} {...service} />
+            ))}
+         </div>
+      </div>
+   )
+}

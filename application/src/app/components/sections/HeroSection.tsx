@@ -1,4 +1,4 @@
-import Button from "../Buttons";
+import { Button } from "../Buttons";
 
 export default function HeroSection() {
    const girlImage = "/assets/girl-2.png"
