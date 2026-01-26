@@ -98,7 +98,7 @@ function HeroCarouselSection({ items }: HeroCarouselSectionProps) {
    }, [items.length, currentIndex]);
 
    return (
-      <div className="hidden md:block relative bg-linear-to-br from-hicea-purple via-25% via-hicea-purple to-hicea-pink pt-24 overflow-hidden">
+      <div className="hidden md:block relative bg-linear-to-br from-hicea-purple via-25% via-hicea-purple to-hicea-pink pt-24 lg:w-full overflow-hidden">
          {/* Left Arrow */}
          <button
             type="button"
@@ -112,7 +112,7 @@ function HeroCarouselSection({ items }: HeroCarouselSectionProps) {
          {/* Carousel Container */}
          <div
             ref={carouselRef}
-            className="relative flex items-center w-dvw *:min-w-full *:h-96 overflow-hidden snap-mandatory snap-x *:snap-center"
+            className="relative flex items-center w-full *:min-w-full *:h-96 overflow-hidden snap-mandatory snap-x *:snap-center"
          >
             {items.map((item) => {
                return item;
@@ -145,8 +145,8 @@ function HeroCarouselSection({ items }: HeroCarouselSectionProps) {
                      type="button"
                      onClick={() => goToSlide(index)}
                      className={`transition-all duration-300 rounded-full ${index === currentIndex
-                           ? "w-3 h-3 bg-white"
-                           : "w-2 h-2 bg-white/60 hover:bg-white/80"
+                        ? "w-3 h-3 bg-white"
+                        : "w-2 h-2 bg-white/60 hover:bg-white/80"
                         }`}
                      aria-label={`Go to slide ${index + 1}`}
                   />
