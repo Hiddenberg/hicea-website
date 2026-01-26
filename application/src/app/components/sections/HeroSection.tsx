@@ -112,7 +112,7 @@ function HeroCarouselSection({ items }: HeroCarouselSectionProps) {
          {/* Carousel Container */}
          <div
             ref={carouselRef}
-            className="relative flex items-center w-full *:min-w-full *:h-96 overflow-hidden snap-mandatory snap-x *:snap-center"
+            className="relative flex items-center w-full *:min-w-full lg:*:h-[70dvh] *:h-96 overflow-hidden snap-mandatory snap-x *:snap-center"
          >
             {items.map((item) => {
                return item;

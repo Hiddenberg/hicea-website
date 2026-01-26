@@ -2,8 +2,8 @@ import { Button } from "../Buttons";
 
 export default function CarouselItem1() {
    return (
-      <div className="flex justify-center items-end px-16">
-         <div className="space-y-4 pb-20">
+      <div className="flex justify-center items-center px-16">
+         <div className="space-y-4 pb-20 lg:w-72">
             <p className="text-white text-3xl leading-7">Tu núcleo ginecológico que te hace sentir plena y protegida</p>
             <Button className="w-fit font-semibold text-sm">
                Haz tu cita aquí

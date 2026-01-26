@@ -5,6 +5,11 @@
    scroll-padding-top: 80px;
 }
 
+button,
+a {
+   cursor: pointer;
+}
+
 @theme {
    --color-hicea-purple: #7d68b2;
    --color-hicea-pink: #ff99cc;
