@@ -45,7 +45,7 @@ const teamMembers: TeamMemberCardProps[] = [
 ]
 export default function OurTeamSection() {
    return (
-      <div className="p-6 md:px-10 w-full">
+      <div className="p-6 md:px-10 lg:px-16 w-full">
          <TextLineIcon />
          <h2 className="font-semibold text-hicea-purple text-3xl">Nuestro equipo de profesionales</h2>
          <div className="flex gap-4 md:gap-4 md:grid md:grid-cols-3 w-full md:*:w-full overflow-x-auto snap-mandatory snap-x">
