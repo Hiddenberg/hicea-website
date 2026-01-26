@@ -27,7 +27,7 @@ const focusItems: FocusItemProps[] = [
 
 export default function OurFocusSection() {
    return (
-      <div className="p-6 pb-0 w-full">
+      <div className="p-6 md:px-10 pb-0 w-full">
          <TextLineIcon />
          <h2 className="mb-4 font-semibold text-hicea-purple text-3xl">Un enfoque dedicado al cuidado integral de la mujer</h2>
 
