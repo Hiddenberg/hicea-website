@@ -7,8 +7,8 @@ interface AboutUsItemProps {
 }
 function AboutUsItem({ title, description, iconURL }: AboutUsItemProps) {
    return (
-      <div className="md:flex md:gap-4 text-hicea-purple">
-         <div className="flex items-center gap-4 mb-2 grow-0">
+      <div className="md:flex md:gap-4 lg:gap-8 text-hicea-purple">
+         <div className="flex items-center gap-4 mb-2 lg:w-52 grow-0">
             {iconURL && <img src={iconURL} alt={title} className="w-12 h-auto object-contain" />}
             <h3 className="font-semibold md:text-xl text-3xl">{title}</h3>
          </div>
@@ -39,7 +39,7 @@ const aboutUsItems: AboutUsItemProps[] = [
 
 export default function AboutUsSection() {
    return (
-      <div className="p-6 md:px-10 w-full">
+      <div className="p-6 md:px-10 lg:px-16 w-full">
          <TextLineIcon />
          <div className="space-y-6">
             <div className="text-hicea-purple">
