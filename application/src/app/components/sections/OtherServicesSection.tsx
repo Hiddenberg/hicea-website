@@ -43,11 +43,11 @@ const otherServices: OtherServiceCardProps[] = [
 
 export default function OtherServicesSection() {
    return (
-      <div className="p-6 md:px-10 w-full">
+      <div className="p-6 md:px-10 lg:px-16 w-full">
          <TextLineIcon />
          <h2 className="mb-4 font-semibold text-hicea-purple text-3xl">Otros servicios</h2>
 
-         <div className="space-y-6">
+         <div className="space-y-6 lg:space-y-14">
             {otherServices.map((service) => (
                <OtherServiceCard key={service.title} {...service} />
             ))}
