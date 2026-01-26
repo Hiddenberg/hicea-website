@@ -82,7 +82,7 @@ const serviceCards: ServiceCardProps[] = [
 
 export default function ServicesSection() {
    return (
-      <div className="bg-linear-to-br from-hicea-pink to-hicea-purple p-6 w-full">
+      <div className="bg-linear-to-br from-hicea-pink to-hicea-purple p-6 md:px-10 w-full">
          <TextLineIcon purple />
          <h2 className="font-semibold text-white text-3xl">Conoce los servicios que tenemos para ti</h2>
 
