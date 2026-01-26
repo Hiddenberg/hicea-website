@@ -1,0 +1,15 @@
+services:
+  hicea-web:
+    image: oven/bun:alpine
+    working_dir: /app
+    volumes:
+      - ./application:/app
+    ports:
+      - 3000:3000
+    command: bun dev
+    networks:
+      - proxynetwork
+
+networks:
+  proxynetwork:
+    external: true

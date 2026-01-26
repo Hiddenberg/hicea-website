@@ -1,0 +1,10 @@
+services:
+  hicea-web:
+    build: ./application
+    restart: always
+    networks:
+      - proxynetwork
+
+networks:
+  proxynetwork:
+    external: true
