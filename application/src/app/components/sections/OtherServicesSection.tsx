@@ -8,10 +8,12 @@ interface OtherServiceCardProps {
 
 function OtherServiceCard({ title, description, iconURL }: OtherServiceCardProps) {
    return (
-      <div>
+      <div className="md:flex md:items-center md:gap-8">
          <img src={iconURL} alt={title} className="mb-2 w-18 h-auto object-contain" />
-         <h3 className="text-hicea-pink text-3xl">{title}</h3>
-         <p className="text-hicea-purple text-lg leading-tight">{description}</p>
+         <div>
+            <h3 className="text-hicea-pink text-3xl">{title}</h3>
+            <p className="text-hicea-purple text-lg leading-tight">{description}</p>
+         </div>
       </div>
    )
 }
@@ -41,7 +43,7 @@ const otherServices: OtherServiceCardProps[] = [
 
 export default function OtherServicesSection() {
    return (
-      <div className="p-6 w-full">
+      <div className="p-6 md:px-10 w-full">
          <TextLineIcon />
          <h2 className="mb-4 font-semibold text-hicea-purple text-3xl">Otros servicios</h2>
 
