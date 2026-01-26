@@ -11,13 +11,21 @@ export default function Home() {
    return (
       <main className="relative">
          <MobileHeader />
-         <HeroSection />
-         <AboutUsSection />
+         <section id="inicio">
+            <HeroSection />
+         </section>
+         <section id="sobre-nosotros">
+            <AboutUsSection />
+         </section>
          <OurTeamSection />
          <OurFocusSection />
-         <ServicesSection />
+         <section id="servicios">
+            <ServicesSection />
+         </section>
          <OtherServicesSection />
-         <ContactSection />
+         <section id="contacto">
+            <ContactSection />
+         </section>
       </main>
    );
 }
