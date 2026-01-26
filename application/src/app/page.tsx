@@ -9,7 +9,7 @@ import ServicesSection from "./components/sections/ServicesSection";
 
 export default function Home() {
    return (
-      <main className="relative">
+      <main className="relative mx-auto max-w-7xl">
          <Header />
          <section id="inicio">
             <HeroSection />
