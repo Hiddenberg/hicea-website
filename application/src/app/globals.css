@@ -1,14 +1,16 @@
 @import "tailwindcss";
 
 :root {
+   scroll-behavior: smooth;
+   scroll-padding-top: 80px;
 }
 
 @theme {
    --color-hicea-purple: #7d68b2;
    --color-hicea-pink: #ff99cc;
-   --color-contact-purple: #7A569A;
-   --color-contact-dark-grey: #4A4A4A;
-   --color-contact-light-purple: #E8B4E4;
-   --color-contact-dark-purple: #5C3D77;
-   --color-contact-button-purple: #8B6EAD;
+   --color-contact-purple: #7a569a;
+   --color-contact-dark-grey: #4a4a4a;
+   --color-contact-light-purple: #e8b4e4;
+   --color-contact-dark-purple: #5c3d77;
+   --color-contact-button-purple: #8b6ead;
 }

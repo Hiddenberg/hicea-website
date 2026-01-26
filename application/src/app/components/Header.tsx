@@ -11,7 +11,42 @@ interface MenuItemProps {
    delay: number;
 }
 
-export default function MobileHeader() {
+function MenuItem({ label, sectionId, onClick, isVisible, delay }: MenuItemProps) {
+   return (
+      <button
+         type="button"
+         onClick={() => onClick(sectionId)}
+         className="group relative flex justify-center items-center bg-white/10 hover:bg-white/20 backdrop-blur-sm px-6 py-4 border-2 border-white/20 hover:border-white/40 rounded-lg w-full hover:scale-105 active:scale-100 transition-all duration-300"
+         style={{
+            opacity: isVisible ? 1 : 0,
+            transform: isVisible ? "translateY(0)" : "translateY(20px)",
+            transition: `all 0.4s ease-out ${delay}ms`
+         }}
+      >
+         <span className="z-10 relative font-bold text-white text-2xl">
+            {label}
+         </span>
+         <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 rounded-lg transition-opacity duration-300" />
+      </button>
+   );
+}
+
+const menuItems = [
+   { label: "Inicio", sectionId: "inicio" },
+   { label: "Sobre nosotros", sectionId: "sobre-nosotros" },
+   { label: "Servicios", sectionId: "servicios" },
+   { label: "Contacto", sectionId: "contacto" }
+];
+
+function HeaderLink({ label, sectionId }: { label: string, sectionId: string }) {
+   return (
+      <a href={`#${sectionId}`} className="text-white">
+         {label}
+      </a>
+   );
+}
+
+export default function Header() {
    const [isScrolled, setIsScrolled] = useState(false);
    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -51,32 +86,7 @@ export default function MobileHeader() {
       }
    };
 
-   const menuItems = [
-      { label: "Inicio", sectionId: "inicio" },
-      { label: "Sobre nosotros", sectionId: "sobre-nosotros" },
-      { label: "Servicios", sectionId: "servicios" },
-      { label: "Contacto", sectionId: "contacto" }
-   ];
 
-   function MenuItem({ label, sectionId, onClick, isVisible, delay }: MenuItemProps) {
-      return (
-         <button
-            type="button"
-            onClick={() => onClick(sectionId)}
-            className="group relative flex justify-center items-center bg-white/10 hover:bg-white/20 backdrop-blur-sm px-6 py-4 border-2 border-white/20 hover:border-white/40 rounded-lg w-full hover:scale-105 active:scale-100 transition-all duration-300"
-            style={{
-               opacity: isVisible ? 1 : 0,
-               transform: isVisible ? "translateY(0)" : "translateY(20px)",
-               transition: `all 0.4s ease-out ${delay}ms`
-            }}
-         >
-            <span className="z-10 relative font-bold text-white text-2xl">
-               {label}
-            </span>
-            <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 rounded-lg transition-opacity duration-300" />
-         </button>
-      );
-   }
 
    return (
       <div>
@@ -86,7 +96,7 @@ export default function MobileHeader() {
             <button
                type="button"
                onClick={() => setIsMenuOpen(!isMenuOpen)}
-               className="z-50"
+               className="md:hidden z-50"
                aria-label="Toggle menu"
             >
                {isMenuOpen ? (
@@ -95,6 +105,12 @@ export default function MobileHeader() {
                   <MenuIcon strokeWidth={3} className="size-8 text-white transition-colors duration-300" />
                )}
             </button>
+
+            <div className="hidden md:block space-x-4">
+               {menuItems.map((item) => (
+                  <HeaderLink key={item.sectionId} label={item.label} sectionId={item.sectionId} />
+               ))}
+            </div>
          </div>
 
          {/* Menu Overlay */}
