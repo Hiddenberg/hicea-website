@@ -1,6 +1,7 @@
 import MobileHeader from "./components/MobileHeader";
 import AboutUsSection from "./components/sections/AboutUsSection";
 import HeroSection from "./components/sections/HeroSection";
+import OtherServicesSection from "./components/sections/OtherServicesSection";
 import OurFocusSection from "./components/sections/OurFocusSection";
 import OurTeamSection from "./components/sections/OurTeamSection";
 import ServicesSection from "./components/sections/ServicesSection";
@@ -14,6 +15,7 @@ export default function Home() {
          <OurTeamSection />
          <OurFocusSection />
          <ServicesSection />
+         <OtherServicesSection />
       </main>
    );
 }
