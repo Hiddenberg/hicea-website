@@ -1,7 +1,7 @@
 "use client";
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "../Buttons";
 import CarouselItem1 from "../carouselItems/CarouselItem1";
 import CarouselItem2 from "../carouselItems/CarouselItem2";
@@ -35,29 +35,67 @@ function HeroMobileSection({ girlImage }: { girlImage: string }) {
    );
 }
 
-
-
 interface HeroCarouselSectionProps {
    items: React.ReactNode[];
 }
 
 function HeroCarouselSection({ items }: HeroCarouselSectionProps) {
    const [currentIndex, setCurrentIndex] = useState(0);
-   const [isTransitioning, setIsTransitioning] = useState(false);
+   const carouselRef = useRef<HTMLDivElement>(null);
 
-   const CHANGE_INTERVAL = 30000;
+   const scrollToIndex = (index: number) => {
+      if (!carouselRef.current) return;
+
+      const container = carouselRef.current;
+      const scrollWidth = container.scrollWidth;
+      const itemWidth = scrollWidth / items.length;
+      const targetScroll = itemWidth * index;
+
+      container.scrollTo({
+         left: targetScroll,
+         behavior: "smooth",
+      });
+   };
 
    const handlePrevious = () => {
-      setCurrentIndex(currentIndex === 0 ? items.length - 1 : currentIndex - 1);
-   }
+      const newIndex = currentIndex === 0 ? items.length - 1 : currentIndex - 1;
+      scrollToIndex(newIndex);
+   };
 
    const handleNext = () => {
-      setCurrentIndex(currentIndex === items.length - 1 ? 0 : currentIndex + 1);
-   }
+      const newIndex = currentIndex === items.length - 1 ? 0 : currentIndex + 1;
+      scrollToIndex(newIndex);
+   };
 
    const goToSlide = (index: number) => {
-      setCurrentIndex(index);
-   }
+      scrollToIndex(index);
+   };
+
+   useEffect(() => {
+      const container = carouselRef.current;
+      if (!container) return;
+
+      const handleScroll = () => {
+         const scrollWidth = container.scrollWidth;
+         const itemWidth = scrollWidth / items.length;
+         const scrollLeft = container.scrollLeft;
+         const newIndex = Math.round(scrollLeft / itemWidth);
+
+         if (
+            newIndex !== currentIndex &&
+            newIndex >= 0 &&
+            newIndex < items.length
+         ) {
+            setCurrentIndex(newIndex);
+         }
+      };
+
+      container.addEventListener("scroll", handleScroll);
+
+      return () => {
+         container.removeEventListener("scroll", handleScroll);
+      };
+   }, [items.length, currentIndex]);
 
    return (
       <div className="hidden md:block relative bg-linear-to-br from-hicea-purple via-25% via-hicea-purple to-hicea-pink pt-24 overflow-hidden">
@@ -72,11 +110,12 @@ function HeroCarouselSection({ items }: HeroCarouselSectionProps) {
          </button>
 
          {/* Carousel Container */}
-         <div className="relative flex items-center w-dvw *:min-w-full *:h-96 overflow-auto snap-mandatory snap-x *:snap-center">
+         <div
+            ref={carouselRef}
+            className="relative flex items-center w-dvw *:min-w-full *:h-96 overflow-hidden snap-mandatory snap-x *:snap-center"
+         >
             {items.map((item) => {
-               return (
-                  item
-               );
+               return item;
             })}
          </div>
 
@@ -106,8 +145,8 @@ function HeroCarouselSection({ items }: HeroCarouselSectionProps) {
                      type="button"
                      onClick={() => goToSlide(index)}
                      className={`transition-all duration-300 rounded-full ${index === currentIndex
-                        ? "w-3 h-3 bg-white"
-                        : "w-2 h-2 bg-white/60 hover:bg-white/80"
+                           ? "w-3 h-3 bg-white"
+                           : "w-2 h-2 bg-white/60 hover:bg-white/80"
                         }`}
                      aria-label={`Go to slide ${index + 1}`}
                   />
