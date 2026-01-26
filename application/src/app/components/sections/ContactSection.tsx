@@ -27,10 +27,10 @@ export default function ContactSection() {
    return (
       <div className="relative flex w-full">
          {/* Main content area */}
-         <div className="flex flex-col flex-1 justify-center items-center bg-hicea-purple px-6 py-12">
+         <div className="flex flex-col flex-1 justify-center items-center bg-hicea-purple px-6 md:px-10 py-12">
             {/* Contact Form Card */}
-            <div className="bg-white mb-12 p-8 w-full max-w-4xl">
-               <h2 className="mb-6 font-bold text-hicea-purple text-2xl">
+            <div className="bg-white shadow-2xl mb-12 p-8 w-full max-w-4xl">
+               <h2 className="mb-6 font-semibold text-hicea-purple text-2xl text-center">
                   Ponte en contacto con nosotros
                </h2>
 
