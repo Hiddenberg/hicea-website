@@ -38,7 +38,7 @@ export default function OurFocusSection() {
                ))}
             </div>
 
-            <img src="/assets/DOCTORA.png" alt="Doctora" className="float-right mx-auto w-auto h-96 lg:h-130 object-contain" />
+            <img src="/assets/DOCTORA.png" alt="Doctora" className="mx-auto w-auto h-96 lg:h-130 object-contain" />
          </div>
       </div>
    )

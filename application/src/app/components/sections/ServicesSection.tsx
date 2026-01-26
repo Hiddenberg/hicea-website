@@ -17,12 +17,12 @@ function ServiceCard({
    buttonURL
 }: ServiceCardProps) {
    return (
-      <div className="shadow-2xl">
+      <div className="lg:flex lg:flex-col shadow-2xl">
          <div className="flex items-center gap-4 bg-hicea-purple p-4">
             <img src={iconURL} alt={subtitle} className="size-12 object-contain" />
             <h3 className="font-semibold text-white text-2xl">{subtitle}</h3>
          </div>
-         <div className="bg-white p-8">
+         <div className="bg-white p-8 lg:grow">
             {titleComponent}
 
             <div className="my-6">
@@ -82,11 +82,11 @@ const serviceCards: ServiceCardProps[] = [
 
 export default function ServicesSection() {
    return (
-      <div className="bg-linear-to-br from-hicea-pink to-hicea-purple p-6 md:px-10 w-full">
+      <div className="bg-linear-to-br from-hicea-pink to-hicea-purple p-6 md:px-10 lg:px-16 w-full">
          <TextLineIcon purple />
          <h2 className="font-semibold text-white text-3xl">Conoce los servicios que tenemos para ti</h2>
 
-         <div className="space-y-8 p-4">
+         <div className="lg:gap-8 space-y-8 lg:space-y-0 lg:grid lg:grid-cols-3 p-4">
             {serviceCards.map((service) => (
                <ServiceCard key={service.subtitle} {...service} />
             ))}
