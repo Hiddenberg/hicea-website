@@ -16,16 +16,18 @@ function ServiceCard({
 }: ServiceCardProps) {
    return (
       <div className="lg:flex lg:flex-col shadow-2xl">
-         <div className="flex items-center gap-4 bg-hicea-purple p-4">
+         <div className="flex items-center gap-4 bg-hicea-purple p-4 h-22">
             <img src={iconURL} alt={subtitle} className="size-12 object-contain" />
             <h3 className="font-semibold text-white text-2xl">{subtitle}</h3>
          </div>
-         <div className="bg-white p-8 lg:grow">
-            {titleComponent}
+         <div className="flex flex-col justify-between bg-white p-8 lg:grow">
+            <div>
+               {titleComponent}
 
-            <div className="my-6">
-               <p className="font-semibold text-hicea-pink">Incluye:</p>
-               <p className="text-hicea-purple text-sm leading-tight">{includesText}</p>
+               <div className="my-6">
+                  <p className="font-semibold text-hicea-pink">Incluye:</p>
+                  <p className="text-hicea-purple text-sm leading-tight">{includesText}</p>
+               </div>
             </div>
 
             <CalendlyButton />
