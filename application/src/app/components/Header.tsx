@@ -1,6 +1,7 @@
 "use client";
 
-import { MenuIcon, X } from "lucide-react";
+import { FacebookIcon, InstagramIcon, MenuIcon, X } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 interface MenuItemProps {
@@ -110,6 +111,14 @@ export default function Header() {
                {menuItems.map((item) => (
                   <HeaderLink key={item.sectionId} label={item.label} sectionId={item.sectionId} />
                ))}
+               <div className="inline space-x-2">
+                  <a href="instagram.com" target="_blank" className="text-white">
+                     <img src="/assets/IG-LOGO.svg" alt="Instagram Logo" className="inline size-5" />
+                  </a>
+                  <a href="facebook.com" target="_blank" className="text-white">
+                     <img src="/assets/FB-LOGO.svg" alt="Facebook Logo" className="inline size-5" />
+                  </a>
+               </div>
             </div>
          </div>
 
