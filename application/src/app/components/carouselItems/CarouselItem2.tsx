@@ -1,4 +1,4 @@
-import { Button } from "../Buttons";
+import CalendlyButton from "../CalendlyButton";
 
 export default function CarouselItem2() {
    return (
@@ -20,9 +20,7 @@ export default function CarouselItem2() {
                      métodos anticonceptivos, consulta especializada y detección
                      de cáncer cervicouterino
                   </p>
-                  <Button className="font-semibold text-sm">
-                     Haz tu cita aquí
-                  </Button>
+                  <CalendlyButton />
                </div>
             </div>
          </div>

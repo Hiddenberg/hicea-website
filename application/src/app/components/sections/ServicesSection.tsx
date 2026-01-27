@@ -1,4 +1,4 @@
-import { LinkButton } from "../Buttons";
+import CalendlyButton from "../CalendlyButton";
 import TextLineIcon from "../TextLineIcon";
 
 interface ServiceCardProps {
@@ -6,7 +6,6 @@ interface ServiceCardProps {
    includesText: string;
    iconURL: string;
    titleComponent: React.ReactNode;
-   buttonURL: string;
 }
 
 function ServiceCard({
@@ -14,7 +13,6 @@ function ServiceCard({
    includesText,
    iconURL,
    titleComponent,
-   buttonURL
 }: ServiceCardProps) {
    return (
       <div className="lg:flex lg:flex-col shadow-2xl">
@@ -30,11 +28,7 @@ function ServiceCard({
                <p className="text-hicea-purple text-sm leading-tight">{includesText}</p>
             </div>
 
-            <LinkButton
-               href={buttonURL}
-            >
-               Haz tu cita aquí
-            </LinkButton>
+            <CalendlyButton />
          </div>
       </div>
    )
@@ -52,7 +46,6 @@ const serviceCards: ServiceCardProps[] = [
             <p className="text-hicea-pink text-7xl">$499</p>
          </div>
       ),
-      buttonURL: "#"
    },
    {
       subtitle: "Control prenatal",
@@ -64,7 +57,6 @@ const serviceCards: ServiceCardProps[] = [
             <p className="text-hicea-pink text-4xl leading-8">DESDE EL EMBARAZO</p>
          </div>
       ),
-      buttonURL: "#"
    },
    {
       subtitle: "Estudios de laboratorio",
@@ -75,8 +67,7 @@ const serviceCards: ServiceCardProps[] = [
             <p className="text-hicea-purple text-4xl leading-8">REALIZATE TUS</p>
             <p className="text-hicea-pink text-4xl leading-8">ESTUDIOS MÉDICOS</p>
          </div>
-      ),
-      buttonURL: "#"
+      )
    },
 ]
 

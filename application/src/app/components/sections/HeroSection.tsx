@@ -2,7 +2,7 @@
 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { Button } from "../Buttons";
+import CalendlyButton from "../CalendlyButton";
 import CarouselItem1 from "../carouselItems/CarouselItem1";
 import CarouselItem2 from "../carouselItems/CarouselItem2";
 import CarouselItem3 from "../carouselItems/CarouselItem3";
@@ -25,9 +25,7 @@ function HeroMobileSection({ girlImage }: { girlImage: string }) {
                   métodos anticonceptivos, consulta especializada y detección de
                   cáncer cervicouterino
                </p>
-               <Button className="font-semibold text-sm">
-                  Haz tu cita aquí
-               </Button>
+               <CalendlyButton />
             </div>
             <img src={girlImage} alt="Girl" className="h-64 object-contain" />
          </div>
@@ -145,8 +143,8 @@ function HeroCarouselSection({ items }: HeroCarouselSectionProps) {
                      type="button"
                      onClick={() => goToSlide(index)}
                      className={`transition-all duration-300 rounded-full ${index === currentIndex
-                        ? "w-3 h-3 bg-white"
-                        : "w-2 h-2 bg-white/60 hover:bg-white/80"
+                           ? "w-3 h-3 bg-white"
+                           : "w-2 h-2 bg-white/60 hover:bg-white/80"
                         }`}
                      aria-label={`Go to slide ${index + 1}`}
                   />

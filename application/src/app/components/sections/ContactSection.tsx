@@ -1,96 +1,19 @@
 "use client";
 
-import { useState } from "react";
+import CalendlyWidget from "../CalendlyWidget";
 
 export default function ContactSection() {
-   const [formData, setFormData] = useState({
-      name: "",
-      email: "",
-      phone: "",
-      subject: "",
-      message: ""
-   });
-
-   const handleSubmit = (e: React.FormEvent) => {
-      e.preventDefault();
-      // Handle form submission here
-      console.log("Form submitted:", formData);
-   };
-
-   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-      setFormData({
-         ...formData,
-         [e.target.name]: e.target.value
-      });
-   };
-
    return (
       <div className="relative flex w-full">
          {/* Main content area */}
          <div className="flex flex-col flex-1 justify-center items-center bg-hicea-purple px-6 md:px-10 py-12">
             {/* Contact Form Card */}
-            <div className="bg-white shadow-2xl mb-12 p-8 w-full max-w-4xl">
-               <h2 className="mb-6 font-semibold text-hicea-purple text-2xl text-center">
-                  Ponte en contacto con nosotros
+            <div className="bg-white shadow-2xl mb-8 p-2 lg:p-8 w-full max-w-4xl">
+               <h2 className="font-semibold text-hicea-purple text-2xl text-center">
+                  Agenda tu cita
                </h2>
 
-               <form onSubmit={handleSubmit} className="gap-4 grid grid-cols-10">
-                  {/* First row - Name and Email (equal width: 5 cols each) */}
-                  <input
-                     type="text"
-                     name="name"
-                     placeholder="Nombre"
-                     value={formData.name}
-                     onChange={handleChange}
-                     className="col-span-5 bg-gray-200 px-4 py-3 border-none rounded outline-none"
-                  />
-                  <input
-                     type="email"
-                     name="email"
-                     placeholder="Email"
-                     value={formData.email}
-                     onChange={handleChange}
-                     className="col-span-5 bg-gray-200 px-4 py-3 border-none rounded outline-none"
-                  />
-
-                  {/* Second row onwards - Left column (6 cols ~60%) and Right column (4 cols ~40%, message spans 2 rows) */}
-                  <div className="flex flex-col gap-4 col-span-6 row-span-2">
-                     <input
-                        type="tel"
-                        name="phone"
-                        placeholder="Teléfono"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="bg-gray-200 px-4 py-3 border-none rounded outline-none"
-                     />
-                     <input
-                        type="text"
-                        name="subject"
-                        placeholder="Asunto"
-                        value={formData.subject}
-                        onChange={handleChange}
-                        className="bg-gray-200 px-4 py-3 border-none rounded outline-none"
-                     />
-                  </div>
-                  <textarea
-                     name="message"
-                     placeholder="Mensaje"
-                     value={formData.message}
-                     onChange={handleChange}
-                     rows={4}
-                     className="col-span-4 row-span-2 bg-gray-200 px-4 py-3 border-none rounded outline-none resize-none"
-                  />
-
-                  {/* Submit button */}
-                  <div className="flex justify-end col-span-10 mt-4">
-                     <button
-                        type="submit"
-                        className="bg-contact-button-purple px-8 py-3 rounded-lg font-semibold text-white"
-                     >
-                        Enviar
-                     </button>
-                  </div>
-               </form>
+               <CalendlyWidget />
             </div>
 
             {/* Company Information */}

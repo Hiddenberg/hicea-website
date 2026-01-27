@@ -1,9 +1,9 @@
 
 const buttonClass = "bg-hicea-purple text-white px-4 py-2 w-fit"
 
-export function Button({ children, className }: { children: React.ReactNode, className?: string }) {
+export function Button({ children, className, onClick }: { children: React.ReactNode, className?: string, onClick?: () => void }) {
    return (
-      <button type="button" className={`${buttonClass} ${className}`}>
+      <button type="button" className={`${buttonClass} ${className}`} onClick={onClick}>
          {children}
       </button>
    );
