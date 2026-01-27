@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import CalendlyWidget from "../CalendlyWidget";
 
 export default function ContactSection() {
@@ -25,14 +26,14 @@ export default function ContactSection() {
                <div className="lg:flex lg:gap-8 space-y-6 lg:space-y-0 mb-8">
                   {/* Sucursal Tonalá */}
                   <div>
-                     <div className="flex items-center gap-3 mb-2">
+                     <Link href="https://maps.app.goo.gl/AGPnPV9YYQP1uACP9" target="_blank" className="flex items-center gap-3 mb-2 hover:text-hicea-pink transition-colors">
                         <img
                            src="/assets/LOGO UBICACION.svg"
                            alt="Ubicación"
                            className="size-7 object-contain"
                         />
                         <h3 className="font-bold text-xl">Sucursal Tonalá</h3>
-                     </div>
+                     </Link>
                      <div className="space-y-1 text-sm">
                         <p>33 2220 5701 / 33 4681 5173</p>
                         <p>hicea.ginecologia@gmail.com</p>
@@ -42,14 +43,14 @@ export default function ContactSection() {
 
                   {/* Sucursal Santa Tere */}
                   <div>
-                     <div className="flex items-center gap-3 mb-2">
+                     <Link href="https://maps.app.goo.gl/vDGXyEG1ckVZvC9t8" target="_blank" className="flex items-center gap-3 mb-2 hover:text-hicea-pink transition-colors">
                         <img
                            src="/assets/LOGO UBICACION.svg"
                            alt="Ubicación"
                            className="size-7 object-contain"
                         />
                         <h3 className="font-bold text-xl">Sucursal Santa Tere</h3>
-                     </div>
+                     </Link>
                      <div className="space-y-1 text-sm">
                         <p>33 2809 9990 / 33 1045 3921</p>
                         <p>hicea.stateresita@gmail.com</p>
