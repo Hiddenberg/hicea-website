@@ -11,7 +11,7 @@ function OtherServiceCard({ title, description, iconURL }: OtherServiceCardProps
       <div className="md:flex md:items-center md:gap-8">
          <img src={iconURL} alt={title} className="mb-2 w-18 h-auto object-contain" />
          <div>
-            <h3 className="text-hicea-pink text-3xl">{title}</h3>
+            <h3 className="font-semibold text-hicea-pink text-2xl">{title}</h3>
             <p className="text-hicea-purple text-lg leading-tight">{description}</p>
          </div>
       </div>
