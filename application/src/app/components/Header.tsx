@@ -152,6 +152,33 @@ export default function Header() {
                      />
                   ))}
                </div>
+
+               {/* Social Media Links */}
+               <div
+                  className="flex gap-6 mt-8 transition-all duration-500"
+                  style={{
+                     opacity: isMenuOpen ? 1 : 0,
+                     transform: isMenuOpen ? "translateY(0)" : "translateY(20px)",
+                     transition: `all 0.4s ease-out ${menuItems.length * 80}ms`
+                  }}
+               >
+                  <a
+                     href="instagram.com"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     className="flex justify-center items-center bg-white/10 hover:bg-white/20 backdrop-blur-sm p-4 border-2 border-white/20 hover:border-white/40 rounded-lg hover:scale-105 active:scale-100 transition-all duration-300"
+                  >
+                     <img src="/assets/IG-LOGO.svg" alt="Instagram Logo" className="size-6" />
+                  </a>
+                  <a
+                     href="facebook.com"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     className="flex justify-center items-center bg-white/10 hover:bg-white/20 backdrop-blur-sm p-4 border-2 border-white/20 hover:border-white/40 rounded-lg hover:scale-105 active:scale-100 transition-all duration-300"
+                  >
+                     <img src="/assets/FB-LOGO.svg" alt="Facebook Logo" className="size-6" />
+                  </a>
+               </div>
             </div>
          </div>
       </div>
