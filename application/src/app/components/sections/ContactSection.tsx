@@ -9,13 +9,13 @@ export default function ContactSection() {
          {/* Main content area */}
          <div className="flex flex-col flex-1 justify-center items-center bg-hicea-purple px-6 md:px-10 py-12">
             {/* Contact Form Card */}
-            <div className="bg-white shadow-2xl mb-8 p-2 lg:p-8 w-full max-w-4xl">
+            {/* <div className="bg-white shadow-2xl mb-8 p-2 lg:p-8 w-full max-w-4xl">
                <h2 className="font-semibold text-hicea-purple text-2xl text-center">
                   Agenda tu cita
                </h2>
 
                <CalendlyWidget />
-            </div>
+            </div> */}
 
             {/* Company Information */}
             <div className="lg:flex lg:gap-8 w-full max-w-4xl text-white">

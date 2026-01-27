@@ -91,7 +91,7 @@ export default function Header() {
 
    return (
       <div>
-         <div className={`top-0 z-50 max-w-360 fixed flex justify-between items-center px-4 py-4 w-full h-20 transition-colors duration-300 ${isScrolled ? "bg-hicea-purple backdrop-blur-sm" : ""}`}>
+         <div className={`top-0 z-50 max-w-360 fixed flex justify-between items-center md:px-8 px-6 py-4 w-full h-20 transition-colors duration-300 ${isScrolled ? "bg-hicea-purple backdrop-blur-sm" : ""}`}>
             <img src="/assets/hicea-logo.svg" alt="Hicea Logo" className="w-auto h-full" />
 
             <button
