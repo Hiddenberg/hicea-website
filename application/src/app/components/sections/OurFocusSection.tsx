@@ -38,7 +38,7 @@ export default function OurFocusSection() {
          </h2>
 
          <div className="lg:flex lg:items-center lg:gap-8">
-            <div className="space-y-4 mb-4">
+            <div className="space-y-10 mb-10">
                {focusItems.map((item) => (
                   <FocusItem key={item.title} {...item} />
                ))}

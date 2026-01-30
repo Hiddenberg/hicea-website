@@ -89,7 +89,7 @@ export default function OtherServicesSection() {
             Otros servicios
          </h2>
 
-         <div className="space-y-6 lg:space-y-14">
+         <div className="space-y-10 lg:space-y-16">
             {otherServices.map((service) => (
                <OtherServiceCard key={service.title} {...service} />
             ))}

@@ -48,7 +48,7 @@ export default function AboutUsSection() {
    return (
       <div className="p-6 md:px-10 lg:px-16 w-full">
          <TextLineIcon />
-         <div className="space-y-6">
+         <div className="space-y-10">
             <div className="text-hicea-purple">
                <div className="flex items-center gap-4 mb-2">
                   <h3 className="font-semibold text-3xl">
