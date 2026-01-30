@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
 <!-- Creator: CorelDRAW 2020 (64-Bit) -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="195px" height="247px" version="1.0" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
-viewBox="0 0 3935 4981.1"
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="268px" height="268px" version="1.0" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"
+viewBox="0 0 4554.2 4554.2"
  xmlns:xlink="http://www.w3.org/1999/xlink"
  xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
  <g id="Capa_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
-  <g id="_2426747992864">
-   <path fill="#FF99CC" d="M2972.5 3337.5l-765.9 402.6 -247.3 130.1 -230.9 -123.1 -765.9 -408.3 0 -1839.9 -239.1 0 -239.1 0 0 2124.8 1244.1 663.3 230.2 122.7 248 -130.4 1244.2 -654.2 0 -2126.2 -239.2 0 -239.1 0 0 1838.6z"/>
-   <path fill="#FF99CC" d="M2206.6 4981.1l0 -1142.8 -248 130.5 -230.2 -122.8 0 1135.1 478.2 0z"/>
-   <path fill="#FF99CC" d="M3450.8 1020.7l0 478.2 484.2 0 0 -478.2 -484.2 0z"/>
-   <path fill="#FF99CC" d="M484.3 1498.9l0 -478.2 -484.3 0 0 478.2 484.3 0z"/>
-   <path fill="#FF99CC" d="M962.5 1498.9l765.9 0 478.2 0 765.9 0 0 -478.2 -765.9 0 0 -1020.7 -478.2 0 0 1020.7 -765.9 0 0 478.2z"/>
+  <g id="_1373136046672">
+   <rect fill="none" width="4554.2" height="4554.2"/>
+   <g>
+    <path fill="#FF99CC" d="M3121 2988.2l-643.1 338.2 -207.7 109.2 -193.9 -103.4 -643 -342.8 0 -1544.9 -200.8 0 -200.8 0 0 1784.1 1044.6 556.9 193.3 103.1 208.3 -109.6 1044.7 -549.2 0 -1785.3 -200.9 0 -200.7 0 0 1543.7z"/>
+    <path fill="#FF99CC" d="M2477.9 4368.3l0 -959.5 -208.3 109.5 -193.3 -103 0 953 401.6 0z"/>
+    <path fill="#FF99CC" d="M3522.6 1042.9l0 401.6 406.6 0 0 -401.6 -406.6 0z"/>
+    <path fill="#FF99CC" d="M1031.7 1444.5l0 -401.6 -406.6 0 0 401.6 406.6 0z"/>
+    <path fill="#FF99CC" d="M1433.3 1444.5l643 0 401.6 0 643.1 0 0 -401.6 -643.1 0 0 -857 -401.6 0 0 857 -643 0 0 401.6z"/>
+   </g>
   </g>
  </g>
 </svg>
