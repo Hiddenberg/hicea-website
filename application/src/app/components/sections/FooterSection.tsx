@@ -6,7 +6,7 @@ export default function FooterSection() {
    const scrollToTop = () => {
       window.scrollTo({
          top: 0,
-         behavior: "smooth"
+         behavior: "smooth",
       });
    };
 
@@ -36,8 +36,12 @@ export default function FooterSection() {
                </svg>
             </div>
             <div className="flex flex-col">
-               <span className="font-bold text-white text-base md:text-xl leading-tight">Escribenos</span>
-               <span className="font-bold text-white text-base md:text-xl leading-tight">en Whatsapp</span>
+               <span className="font-bold text-white text-base md:text-xl leading-tight">
+                  Escribenos
+               </span>
+               <span className="font-bold text-white text-base md:text-xl leading-tight">
+                  en Whatsapp
+               </span>
             </div>
          </a>
 
@@ -53,7 +57,10 @@ export default function FooterSection() {
             className="flex justify-center items-center order-2 md:order-3 bg-hicea-pink hover:opacity-80 size-10 md:size-14 active:scale-95 transition-all shrink-0"
             aria-label="Scroll to top"
          >
-            <ChevronUp className="size-5 md:size-7 text-white" strokeWidth={3} />
+            <ChevronUp
+               className="size-5 md:size-7 text-white"
+               strokeWidth={3}
+            />
          </button>
       </div>
    );

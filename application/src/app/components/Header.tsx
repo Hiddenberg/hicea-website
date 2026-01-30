@@ -1,7 +1,6 @@
 "use client";
 
-import { FacebookIcon, InstagramIcon, MenuIcon, X } from "lucide-react";
-import Link from "next/link";
+import { MenuIcon, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
 interface MenuItemProps {
@@ -12,7 +11,13 @@ interface MenuItemProps {
    delay: number;
 }
 
-function MenuItem({ label, sectionId, onClick, isVisible, delay }: MenuItemProps) {
+function MenuItem({
+   label,
+   sectionId,
+   onClick,
+   isVisible,
+   delay,
+}: MenuItemProps) {
    return (
       <button
          type="button"
@@ -21,7 +26,7 @@ function MenuItem({ label, sectionId, onClick, isVisible, delay }: MenuItemProps
          style={{
             opacity: isVisible ? 1 : 0,
             transform: isVisible ? "translateY(0)" : "translateY(20px)",
-            transition: `all 0.4s ease-out ${delay}ms`
+            transition: `all 0.4s ease-out ${delay}ms`,
          }}
       >
          <span className="z-10 relative font-bold text-white text-2xl">
@@ -36,10 +41,16 @@ const menuItems = [
    { label: "Inicio", sectionId: "inicio" },
    { label: "Sobre nosotros", sectionId: "sobre-nosotros" },
    { label: "Servicios", sectionId: "servicios" },
-   { label: "Contacto", sectionId: "contacto" }
+   { label: "Contacto", sectionId: "contacto" },
 ];
 
-function HeaderLink({ label, sectionId }: { label: string, sectionId: string }) {
+function HeaderLink({
+   label,
+   sectionId,
+}: {
+   label: string;
+   sectionId: string;
+}) {
    return (
       <a href={`#${sectionId}`} className="text-white">
          {label}
@@ -82,17 +93,21 @@ export default function Header() {
 
          window.scrollTo({
             top: offsetPosition,
-            behavior: "smooth"
+            behavior: "smooth",
          });
       }
    };
 
-
-
    return (
       <div>
-         <div className={`top-0 z-50 max-w-360 fixed flex justify-between items-center md:px-8 px-6 py-4 w-full h-20 transition-colors duration-300 ${isScrolled ? "bg-hicea-purple backdrop-blur-sm" : ""}`}>
-            <img src="/assets/hicea-logo.svg" alt="Hicea Logo" className="w-auto h-full" />
+         <div
+            className={`top-0 z-50 max-w-360 fixed flex justify-between items-center md:px-8 px-6 py-4 w-full h-20 transition-colors duration-300 ${isScrolled ? "bg-hicea-purple backdrop-blur-sm" : ""}`}
+         >
+            <img
+               src="/assets/hicea-logo.svg"
+               alt="Hicea Logo"
+               className="w-auto h-full"
+            />
 
             <button
                type="button"
@@ -101,22 +116,50 @@ export default function Header() {
                aria-label="Toggle menu"
             >
                {isMenuOpen ? (
-                  <X strokeWidth={3} className="size-8 text-white transition-colors duration-300" />
+                  <X
+                     strokeWidth={3}
+                     className="size-8 text-white transition-colors duration-300"
+                  />
                ) : (
-                  <MenuIcon strokeWidth={3} className="size-8 text-white transition-colors duration-300" />
+                  <MenuIcon
+                     strokeWidth={3}
+                     className="size-8 text-white transition-colors duration-300"
+                  />
                )}
             </button>
 
             <div className="hidden md:block space-x-4">
                {menuItems.map((item) => (
-                  <HeaderLink key={item.sectionId} label={item.label} sectionId={item.sectionId} />
+                  <HeaderLink
+                     key={item.sectionId}
+                     label={item.label}
+                     sectionId={item.sectionId}
+                  />
                ))}
                <div className="inline space-x-2">
-                  <a href="instagram.com" target="_blank" className="text-white">
-                     <img src="/assets/IG-LOGO.svg" alt="Instagram Logo" className="inline size-5" />
+                  <a
+                     href="instagram.com"
+                     target="_blank"
+                     className="text-white"
+                     rel="noopener"
+                  >
+                     <img
+                        src="/assets/IG-LOGO.svg"
+                        alt="Instagram Logo"
+                        className="inline size-5"
+                     />
                   </a>
-                  <a href="facebook.com" target="_blank" className="text-white">
-                     <img src="/assets/FB-LOGO.svg" alt="Facebook Logo" className="inline size-5" />
+                  <a
+                     href="facebook.com"
+                     target="_blank"
+                     className="text-white"
+                     rel="noopener"
+                  >
+                     <img
+                        src="/assets/FB-LOGO.svg"
+                        alt="Facebook Logo"
+                        className="inline size-5"
+                     />
                   </a>
                </div>
             </div>
@@ -124,8 +167,9 @@ export default function Header() {
 
          {/* Menu Overlay */}
          <div
-            className={`top-0 left-0 z-40 fixed w-full h-screen bg-linear-to-br from-hicea-purple via-25% via-hicea-purple to-hicea-pink transition-transform duration-300 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"
-               }`}
+            className={`top-0 left-0 z-40 fixed w-full h-screen bg-linear-to-br from-hicea-purple via-25% via-hicea-purple to-hicea-pink transition-transform duration-300 ease-in-out ${
+               isMenuOpen ? "translate-x-0" : "translate-x-full"
+            }`}
          >
             <div className="flex flex-col justify-center items-center gap-6 px-6 pt-20 h-full">
                {/* Logo in menu */}
@@ -133,10 +177,16 @@ export default function Header() {
                   className="mb-8 transition-all duration-500"
                   style={{
                      opacity: isMenuOpen ? 1 : 0,
-                     transform: isMenuOpen ? "translateY(0) scale(1)" : "translateY(-20px) scale(0.9)"
+                     transform: isMenuOpen
+                        ? "translateY(0) scale(1)"
+                        : "translateY(-20px) scale(0.9)",
                   }}
                >
-                  <img src="/assets/hicea-logo.svg" alt="Hicea Logo" className="drop-shadow-lg w-auto h-16 object-contain" />
+                  <img
+                     src="/assets/hicea-logo.svg"
+                     alt="Hicea Logo"
+                     className="drop-shadow-lg w-auto h-16 object-contain"
+                  />
                </div>
 
                {/* Menu Items */}
@@ -158,8 +208,10 @@ export default function Header() {
                   className="flex gap-6 mt-8 transition-all duration-500"
                   style={{
                      opacity: isMenuOpen ? 1 : 0,
-                     transform: isMenuOpen ? "translateY(0)" : "translateY(20px)",
-                     transition: `all 0.4s ease-out ${menuItems.length * 80}ms`
+                     transform: isMenuOpen
+                        ? "translateY(0)"
+                        : "translateY(20px)",
+                     transition: `all 0.4s ease-out ${menuItems.length * 80}ms`,
                   }}
                >
                   <a
@@ -168,7 +220,11 @@ export default function Header() {
                      rel="noopener noreferrer"
                      className="flex justify-center items-center bg-white/10 hover:bg-white/20 backdrop-blur-sm p-4 border-2 border-white/20 hover:border-white/40 rounded-lg hover:scale-105 active:scale-100 transition-all duration-300"
                   >
-                     <img src="/assets/IG-LOGO.svg" alt="Instagram Logo" className="size-6" />
+                     <img
+                        src="/assets/IG-LOGO.svg"
+                        alt="Instagram Logo"
+                        className="size-6"
+                     />
                   </a>
                   <a
                      href="facebook.com"
@@ -176,7 +232,11 @@ export default function Header() {
                      rel="noopener noreferrer"
                      className="flex justify-center items-center bg-white/10 hover:bg-white/20 backdrop-blur-sm p-4 border-2 border-white/20 hover:border-white/40 rounded-lg hover:scale-105 active:scale-100 transition-all duration-300"
                   >
-                     <img src="/assets/FB-LOGO.svg" alt="Facebook Logo" className="size-6" />
+                     <img
+                        src="/assets/FB-LOGO.svg"
+                        alt="Facebook Logo"
+                        className="size-6"
+                     />
                   </a>
                </div>
             </div>

@@ -132,9 +132,9 @@ function HeroCarouselSection({ items }: HeroCarouselSectionProps) {
             {items.map((item, index) => {
                const key =
                   typeof item === "object" &&
-                     item !== null &&
-                     "key" in item &&
-                     item.key !== null
+                  item !== null &&
+                  "key" in item &&
+                  item.key !== null
                      ? String(item.key)
                      : `carousel-dot-${index}`;
                return (
@@ -142,10 +142,11 @@ function HeroCarouselSection({ items }: HeroCarouselSectionProps) {
                      key={key}
                      type="button"
                      onClick={() => goToSlide(index)}
-                     className={`transition-all duration-300 rounded-full ${index === currentIndex
+                     className={`transition-all duration-300 rounded-full ${
+                        index === currentIndex
                            ? "w-3 h-3 bg-white"
                            : "w-2 h-2 bg-white/60 hover:bg-white/80"
-                        }`}
+                     }`}
                      aria-label={`Go to slide ${index + 1}`}
                   />
                );

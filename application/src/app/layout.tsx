@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import localFont from "next/font/local"
+import localFont from "next/font/local";
 import Script from "next/script";
 
 const sequelFont = localFont({
@@ -20,14 +20,14 @@ const sequelFont = localFont({
          path: "./fonts/Sequel-Sans-Black-Body.ttf",
          weight: "700",
          style: "normal",
-      }
+      },
    ],
 });
 
-
 export const metadata: Metadata = {
    title: "Hicea",
-   description: "Hicea es una clínica ginecológica que ofrece servicios de atención integral a las mujeres",
+   description:
+      "Hicea es una clínica ginecológica que ofrece servicios de atención integral a las mujeres",
 };
 
 export default function RootLayout({
@@ -38,13 +38,17 @@ export default function RootLayout({
    return (
       <html lang="es-MX">
          <head>
-            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet" />
+            <link
+               href="https://assets.calendly.com/assets/external/widget.css"
+               rel="stylesheet"
+            />
          </head>
-         <body
-            className={`${sequelFont.className} antialiased`}
-         >
+         <body className={`${sequelFont.className} antialiased`}>
             {children}
-            <Script src="https://assets.calendly.com/assets/external/widget.js" async />
+            <Script
+               src="https://assets.calendly.com/assets/external/widget.js"
+               async
+            />
          </body>
       </html>
    );

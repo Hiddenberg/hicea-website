@@ -18,10 +18,5 @@ export default function CalendlyButton() {
       }
    };
 
-   return (
-      < Button
-         onClick={() => handleClick()}>
-         Agenda tu cita
-      </Button >
-   )
+   return <Button onClick={() => handleClick()}>Agenda tu cita</Button>;
 }
