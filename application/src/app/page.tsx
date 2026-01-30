@@ -7,6 +7,7 @@ import OtherServicesSection from "./components/sections/OtherServicesSection";
 import OurFocusSection from "./components/sections/OurFocusSection";
 import OurTeamSection from "./components/sections/OurTeamSection";
 import ServicesSection from "./components/sections/ServicesSection";
+import FloatingWhatsappButton from "./components/FloatingWhatsappButton";
 
 export default function Home() {
    return (
@@ -28,6 +29,7 @@ export default function Home() {
             <ContactSection />
          </section>
          <FooterSection />
+         <FloatingWhatsappButton />
       </main>
    );
 }
