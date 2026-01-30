@@ -75,7 +75,7 @@ const otherServices: OtherServiceCardProps[] = [
       title: "Control especializado en VPH",
       description:
          "El control especializado en VPH es fundamental para la vigilancia y el manejo efectivo de esta infección viral común, responsable de una variedad de enfermedades, incluyendo el cáncer cervical y otras condiciones relacionadas. A través de métodos específicos de detección, seguimiento y tratamiento, los profesionales de la salud pueden ayudar a los pacientes a gestionar adecuadamente el virus y prevenir complicaciones graves.",
-      iconURL: "/assets/CONTROL-VPH.svg",
+      iconURL: "/assets/PROTECCION-VPH.svg",
    },
    // {
    //    title: "Laboratoriales",
