@@ -4,6 +4,8 @@ services:
     restart: always
     networks:
       - proxynetwork
+    ports:
+      - 3000:3000
 
 networks:
   proxynetwork:

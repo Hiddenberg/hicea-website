@@ -27,20 +27,11 @@ ENV NODE_ENV=production
 RUN bun --bun run build
 
 # copy production dependencies and source code into final image
-FROM base AS release
+FROM nginx:stable-alpine AS release
 
 # copy next.js files
-COPY --from=builder --chown=bun:bun /app/.next .next
-COPY --from=builder --chown=bun:bun /app/public public
-COPY --from=builder --chown=bun:bun /app/next.config.ts ./next.config.ts
-COPY --from=builder --chown=bun:bun /app/.env .env
-COPY --from=builder --chown=bun:bun /app/.env.production .env.production
+COPY --from=builder /app/out /var/www/out
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# copy production dependencies
-COPY --from=builder --chown=bun:bun /app/package.json .
-COPY --from=prod-installer --chown=bun:bun /temp/prod/node_modules node_modules
-
-# run the app
-USER bun
 EXPOSE 3000/tcp
-CMD ["bun", "run", "start"]
+CMD ["nginx", "-g", "daemon off;"]
