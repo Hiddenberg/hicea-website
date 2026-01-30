@@ -31,7 +31,7 @@ function TeamMemberCard({
          </div>
          <a
             href={curriculumURL}
-            className="flex items-center gap-2 bg-hicea-pink p-2 px-4 w-fit text-white"
+            className="flex items-center gap-2 bg-hicea-pink p-2 px-4 w-fit text-white hover:scale-110 transition-transform duration-300"
          >
             Curriculum <ArrowRightIcon className="size-4" />
          </a>

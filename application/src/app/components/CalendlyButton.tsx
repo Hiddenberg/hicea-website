@@ -18,5 +18,5 @@ export default function CalendlyButton() {
       }
    };
 
-   return <Button onClick={() => handleClick()}>Agenda tu cita</Button>;
+   return <Button onClick={() => handleClick()} className="hover:scale-110 transition-transform duration-300">Agenda tu cita</Button>;
 }

@@ -15,12 +15,12 @@ function ServiceCard({
    titleComponent,
 }: ServiceCardProps) {
    return (
-      <div className="lg:flex lg:flex-col shadow-2xl">
-         <div className="flex items-center gap-4 bg-hicea-purple p-4 h-22">
+      <div className="group lg:flex lg:flex-col shadow-2xl hover:shadow-[0_20px_40px_-12px_rgba(168,85,247,0.2)] hover:-translate-y-1 transition-all duration-300 ease-out">
+         <div className="flex items-center gap-4 bg-hicea-purple p-4 h-22 transition-colors duration-300">
             <img
                src={iconURL}
                alt={subtitle}
-               className="size-12 object-contain"
+               className="size-12 object-contain group-hover:scale-105 transition-transform duration-300"
             />
             <h3 className="font-semibold text-white text-2xl">{subtitle}</h3>
          </div>
