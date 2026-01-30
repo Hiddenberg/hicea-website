@@ -1,3 +1,4 @@
+import FloatingWhatsappButton from "./components/FloatingWhatsappButton";
 import Header from "./components/Header";
 import AboutUsSection from "./components/sections/AboutUsSection";
 import ContactSection from "./components/sections/ContactSection";
@@ -7,7 +8,6 @@ import OtherServicesSection from "./components/sections/OtherServicesSection";
 import OurFocusSection from "./components/sections/OurFocusSection";
 import OurTeamSection from "./components/sections/OurTeamSection";
 import ServicesSection from "./components/sections/ServicesSection";
-import FloatingWhatsappButton from "./components/FloatingWhatsappButton";
 
 export default function Home() {
    return (

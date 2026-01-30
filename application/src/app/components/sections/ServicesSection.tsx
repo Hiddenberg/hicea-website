@@ -51,7 +51,9 @@ function LabStudiesCard() {
                alt={"Estudios de laboratorio"}
                className="size-12 object-contain group-hover:scale-105 transition-transform duration-300"
             />
-            <h3 className="font-semibold text-white text-2xl">Estudios de laboratorio</h3>
+            <h3 className="font-semibold text-white text-2xl">
+               Estudios de laboratorio
+            </h3>
          </div>
          <div className="flex flex-col justify-between bg-white p-8 lg:grow">
             <div>
@@ -65,7 +67,9 @@ function LabStudiesCard() {
                </div>
 
                <div className="my-6">
-                  <span className="text-hicea-pink text-xk">Estudios de laboratorio</span>
+                  <span className="text-hicea-pink text-xk">
+                     Estudios de laboratorio
+                  </span>
                   <ul className="text-hicea-purple text-sm leading-tight list-disc list-inside">
                      <li>Biométrica hematica</li>
                      <li>Química Sanguínea</li>
@@ -80,7 +84,7 @@ function LabStudiesCard() {
             <CalendlyButton />
          </div>
       </div>
-   )
+   );
 }
 
 const serviceCards: ServiceCardProps[] = [
@@ -101,8 +105,7 @@ const serviceCards: ServiceCardProps[] = [
    },
    {
       subtitle: "Control prenatal",
-      includesText:
-         "Consulta especializada y ultrasonido obstretico",
+      includesText: "Consulta especializada y ultrasonido obstretico",
       iconURL: "/assets/control-prenatal.svg",
       titleComponent: (
          <div className="font-bold">

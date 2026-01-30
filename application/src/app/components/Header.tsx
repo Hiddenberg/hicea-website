@@ -52,7 +52,10 @@ function HeaderLink({
    sectionId: string;
 }) {
    return (
-      <a href={`#${sectionId}`} className="text-white hover:text-hicea-pink transition-colors duration-300">
+      <a
+         href={`#${sectionId}`}
+         className="text-white hover:text-hicea-pink transition-colors duration-300"
+      >
          {label}
       </a>
    );
@@ -167,8 +170,9 @@ export default function Header() {
 
          {/* Menu Overlay */}
          <div
-            className={`top-0 left-0 z-40 fixed w-full h-screen bg-linear-to-br from-hicea-purple via-25% via-hicea-purple to-hicea-pink transition-transform duration-300 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"
-               }`}
+            className={`top-0 left-0 z-40 fixed w-full h-screen bg-linear-to-br from-hicea-purple via-25% via-hicea-purple to-hicea-pink transition-transform duration-300 ease-in-out ${
+               isMenuOpen ? "translate-x-0" : "translate-x-full"
+            }`}
          >
             <div className="flex flex-col justify-center items-center gap-6 px-6 pt-20 h-full">
                {/* Logo in menu */}
