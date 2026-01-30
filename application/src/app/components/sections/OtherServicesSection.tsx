@@ -41,12 +41,12 @@ const otherServices: OtherServiceCardProps[] = [
          "La vacuna contra el virus del papiloma humano (VPH) es una herramienta crucial en la prevención de varios tipos de cáncer y enfermedades asociadas con este virus. El VPH es una de las infecciones de transmisión sexual más comunes en el mundo, y aunque la mayoría de las infecciones por VPH son inofensivas y desaparecen por sí solas, algunas cepas del virus pueden causar cáncer cervical, anal, de pene, vulvar, vaginal, y orofaríngeo, así como verrugas genitales.",
       iconURL: "/assets/VACUNAS-VPH.svg",
    },
-   {
-      title: "Control prenatal",
-      description:
-         "El control prenatal es una serie de visitas médicas regulares durante el embarazo que permite a las futuras madres recibir cuidados médicos y apoyo necesarios para garantizar un embarazo saludable y seguro. Este seguimiento es crucial para la detección temprana de posibles complicaciones y para promover la salud tanto de la madre como del bebé.",
-      iconURL: "/assets/CONTROL-PRENATAL-2.svg",
-   },
+   // {
+   //    title: "Control prenatal",
+   //    description:
+   //       "El control prenatal es una serie de visitas médicas regulares durante el embarazo que permite a las futuras madres recibir cuidados médicos y apoyo necesarios para garantizar un embarazo saludable y seguro. Este seguimiento es crucial para la detección temprana de posibles complicaciones y para promover la salud tanto de la madre como del bebé.",
+   //    iconURL: "/assets/CONTROL-PRENATAL-2.svg",
+   // },
    {
       title: "Tratamientos ablativos",
       description:
@@ -77,12 +77,12 @@ const otherServices: OtherServiceCardProps[] = [
          "El control especializado en VPH es fundamental para la vigilancia y el manejo efectivo de esta infección viral común, responsable de una variedad de enfermedades, incluyendo el cáncer cervical y otras condiciones relacionadas. A través de métodos específicos de detección, seguimiento y tratamiento, los profesionales de la salud pueden ayudar a los pacientes a gestionar adecuadamente el virus y prevenir complicaciones graves.",
       iconURL: "/assets/CONTROL-ESPECIALIZADO-EN-VPH.svg",
    },
-   {
-      title: "Laboratoriales",
-      description:
-         "Las pruebas de laboratorio juegan un papel crucial en la práctica médica moderna, proporcionando información objetiva y precisa que guía el diagnóstico, tratamiento y seguimiento de diversas condiciones de salud. Estas pruebas abarcan una amplia gama de análisis bioquímicos, microbiológicos, genéticos e inmunológicos, cada uno diseñado para evaluar diferentes aspectos del funcionamiento del cuerpo humano y detectar posibles anomalías.",
-      iconURL: "/assets/VACUNAS-VPH.svg",
-   },
+   // {
+   //    title: "Laboratoriales",
+   //    description:
+   //       "Las pruebas de laboratorio juegan un papel crucial en la práctica médica moderna, proporcionando información objetiva y precisa que guía el diagnóstico, tratamiento y seguimiento de diversas condiciones de salud. Estas pruebas abarcan una amplia gama de análisis bioquímicos, microbiológicos, genéticos e inmunológicos, cada uno diseñado para evaluar diferentes aspectos del funcionamiento del cuerpo humano y detectar posibles anomalías.",
+   //    iconURL: "/assets/VACUNAS-VPH.svg",
+   // },
    {
       title: "Consulta especializada",
       description:
