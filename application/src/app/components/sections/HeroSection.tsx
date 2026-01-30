@@ -101,10 +101,10 @@ function HeroCarouselSection({ items }: HeroCarouselSectionProps) {
          <button
             type="button"
             onClick={handlePrevious}
-            className="top-1/2 left-4 z-10 absolute flex justify-center items-center hover:opacity-80 w-10 h-10 text-white transition-opacity -translate-y-1/2"
+            className="group top-1/2 left-4 z-10 absolute flex justify-center items-center hover:opacity-80 size-12 text-white transition-opacity -translate-y-1/2"
             aria-label="Previous slide"
          >
-            <ChevronLeft className="size-8" strokeWidth={3} />
+            <ChevronLeft className="size-8 group-hover:scale-120 transition-transform duration-300" strokeWidth={3} />
          </button>
 
          {/* Carousel Container */}
@@ -121,10 +121,10 @@ function HeroCarouselSection({ items }: HeroCarouselSectionProps) {
          <button
             type="button"
             onClick={handleNext}
-            className="top-1/2 right-4 z-10 absolute flex justify-center items-center hover:opacity-80 w-10 h-10 text-white transition-opacity -translate-y-1/2"
+            className="group top-1/2 right-4 z-10 absolute flex justify-center items-center hover:opacity-80 size-12 text-white transition-opacity -translate-y-1/2"
             aria-label="Next slide"
          >
-            <ChevronRight className="size-8" strokeWidth={3} />
+            <ChevronRight className="size-8 group-hover:scale-120 transition-transform duration-300" strokeWidth={3} />
          </button>
 
          {/* Dot Indicators */}
@@ -132,9 +132,9 @@ function HeroCarouselSection({ items }: HeroCarouselSectionProps) {
             {items.map((item, index) => {
                const key =
                   typeof item === "object" &&
-                  item !== null &&
-                  "key" in item &&
-                  item.key !== null
+                     item !== null &&
+                     "key" in item &&
+                     item.key !== null
                      ? String(item.key)
                      : `carousel-dot-${index}`;
                return (
@@ -142,11 +142,10 @@ function HeroCarouselSection({ items }: HeroCarouselSectionProps) {
                      key={key}
                      type="button"
                      onClick={() => goToSlide(index)}
-                     className={`transition-all duration-300 rounded-full ${
-                        index === currentIndex
-                           ? "w-3 h-3 bg-white"
-                           : "w-2 h-2 bg-white/60 hover:bg-white/80"
-                     }`}
+                     className={`transition-all duration-300 rounded-full ${index === currentIndex
+                        ? "w-3 h-3 bg-white"
+                        : "w-2 h-2 bg-white/60 hover:bg-white/80"
+                        }`}
                      aria-label={`Go to slide ${index + 1}`}
                   />
                );
