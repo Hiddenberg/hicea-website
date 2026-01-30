@@ -17,9 +17,10 @@ export default function ContactSection() {
             </div> */}
 
             {/* Company Information */}
-            <div className="lg:flex lg:gap-8 w-full max-w-4xl text-white">
+            <div className="lg:flex lg:items-start lg:gap-8 w-full max-w-4xl text-white">
                {/* Company Name */}
-               <h2 className="mb-8 text-4xl lg:text-6xl">Hicea</h2>
+               {/* <h2 className="mb-8 text-4xl lg:text-6xl">Hicea</h2> */}
+               <img src="/assets/HICEA-TIPOGRAFIA.svg" alt="Hicea" className="mb-8 md:mb-0 w-38 h-auto object-contain" />
 
                {/* Branches */}
                <div className="lg:flex lg:gap-8 space-y-6 lg:space-y-0 mb-8">
