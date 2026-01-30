@@ -92,7 +92,7 @@ const serviceCards: ServiceCardProps[] = [
       subtitle: "Chequeos ginecologicos",
       includesText:
          "Exploración mamaria, papanicolaou, colposcopia, revisión de métodos anticonceptivos y detección de cáncer cervicouterino",
-      iconURL: "/assets/chequeos-ginecologicos.svg",
+      iconURL: "/assets/CHEQUEOS-GINECOLOGICOS.svg",
       titleComponent: (
          <div className="font-bold">
             <p className="text-hicea-purple text-4xl leading-8">CHECK-UP</p>
