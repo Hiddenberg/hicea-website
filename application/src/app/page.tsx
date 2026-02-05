@@ -5,7 +5,7 @@ import ContactSection from "./components/sections/ContactSection";
 import FooterSection from "./components/sections/FooterSection";
 import HeroSection from "./components/sections/HeroSection";
 import OurFocusSection from "./components/sections/OurFocusSection";
-import OurTeamSection from "./components/sections/OurTeamSection";
+// import OurTeamSection from "./components/sections/OurTeamSection";
 import ServicesSection from "./components/sections/ServicesSection";
 import TagsGallerySection from "./components/TagsGallery";
 
@@ -19,7 +19,7 @@ export default function Home() {
          <section id="sobre-nosotros">
             <AboutUsSection />
          </section>
-         <OurTeamSection />
+         {/* <OurTeamSection /> */}
          <OurFocusSection />
          <section id="servicios">
             <ServicesSection />
