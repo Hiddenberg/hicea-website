@@ -3,7 +3,6 @@ services:
     build:
       context: ./application
       platforms:
-        - linux/amd64
         - linux/arm64
     image: hiddenberg/hicea-web:latest
     restart: always
