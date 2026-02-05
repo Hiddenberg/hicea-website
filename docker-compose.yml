@@ -1,6 +1,11 @@
 services:
   hicea-web:
-    build: ./application
+    build:
+      context: ./application
+      platforms:
+        - linux/amd64
+        - linux/arm64
+    image: hiddenberg/hicea-web:latest
     restart: always
     networks:
       - proxynetwork
