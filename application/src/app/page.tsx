@@ -4,10 +4,10 @@ import AboutUsSection from "./components/sections/AboutUsSection";
 import ContactSection from "./components/sections/ContactSection";
 import FooterSection from "./components/sections/FooterSection";
 import HeroSection from "./components/sections/HeroSection";
-import OtherServicesSection from "./components/sections/OtherServicesSection";
 import OurFocusSection from "./components/sections/OurFocusSection";
 import OurTeamSection from "./components/sections/OurTeamSection";
 import ServicesSection from "./components/sections/ServicesSection";
+import TagsGallerySection from "./components/TagsGallery";
 
 export default function Home() {
    return (
@@ -24,7 +24,7 @@ export default function Home() {
          <section id="servicios">
             <ServicesSection />
          </section>
-         <OtherServicesSection />
+         <TagsGallerySection />
          <section id="contacto">
             <ContactSection />
          </section>
