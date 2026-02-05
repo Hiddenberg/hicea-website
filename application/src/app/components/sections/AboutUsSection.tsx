@@ -39,7 +39,7 @@ const aboutUsItems: AboutUsItemProps[] = [
    {
       title: "Nuestros valores",
       description:
-         "Nos guiamos por la accesibilidad, la calidad y el compromiso para brindar atención responsable y cercana. Creemos en la prevención como base del bienestar femenino y actuamos con empatía, respeto y sensibilidad en cada consulta. Garantizamos la confidencialidad, creando un espacio seguro donde cada mujer se sienta escuchada, valorada y protegida.",
+         "Nuestros valores se basan en la accesibilidad, la calidad, la empatía, la confidencialidad,  el compromiso, el respeto y la prevención, pilares que guían nuestra atención hacia cada paciente",
       iconURL: "/assets/VALORES.svg",
    },
 ];

@@ -25,7 +25,7 @@ const focusItems: FocusItemProps[] = [
    {
       title: "Atención Integral y Personalizada",
       description:
-         "En Hicea Núcleo Ginecológico creemos que la prevención es clave para una vida saludable. Por ello, nos enfocamos en educar y acompañar a las mujeres en el cuidado proactivo de su salud mediante chequeos regulares, diagnósticos tempranos y orientación personalizada. Este enfoque no solo permite detectar oportunamente posibles problemas de salud, sino que también fomenta hábitos conscientes que promueven el bienestar a largo plazo.",
+         "Ofrecemos una atención integral y personalizada, enfocada en el cuidado completo de tu salud ginecológica. Nos tomamos el tiempo para escucharte, comprender tus necesidades y resolver tus inquietudes, acompañándote en cada etapa con un enfoque humano y profesional. Nuestro objetivo es brindarte diagnósticos certeros, tratamientos adecuados y un seguimiento continuo, siempre con respeto, empatía y confidencialidad, para que te sientas segura y en confianza en todo momento",
    },
 ];
 
