@@ -16,6 +16,10 @@ const tagImageLinks = [
    "/assets/tags/checkup_masculino.png",
    "/assets/tags/etscultivo.png",
    "/assets/tags/ets_y_its.png",
+   "/assets/tags/pcr_28.png",
+   "/assets/tags/retiro_de_diu.png",
+   "/assets/tags/vacunas_vph.png",
+   "/assets/tags/y_mas.png",
 ];
 
 interface GalleryImageProps {
