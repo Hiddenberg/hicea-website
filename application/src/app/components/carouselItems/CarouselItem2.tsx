@@ -8,7 +8,7 @@ export default function CarouselItem2() {
                <p>INICIA EL 2026</p>
                <p>CUIDANDOTE</p>
             </h1>
-            <p className="font-bold text-hicea-pink text-6xl text-center">CHEK-UP</p>
+            <p className="font-bold text-hicea-pink text-6xl text-center">CHECK-UP</p>
             <p className="font-bold text-white text-8xl text-center leading-20">$499</p>
             <div className="flex lg:justify-end items-center px-2 w-full">
                <div className="flex flex-col items-end gap-2">

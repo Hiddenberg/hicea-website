@@ -15,7 +15,7 @@ function HeroMobileSection({ girlImage }: { girlImage: string }) {
                <p>INICIA EL 2026</p>
                <p>CUIDANDOTE</p>
             </h1>
-            <p className="text-hicea-pink text-6xl text-center">CHEK-UP</p>
+            <p className="text-hicea-pink text-6xl text-center">CHECK-UP</p>
             <p className="text-white text-8xl text-center leading-20">$499</p>
          </div>
          <div className="flex items-center -mt-10 px-2 w-full">
