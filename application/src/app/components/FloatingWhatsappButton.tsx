@@ -1,15 +1,17 @@
+const WHATSAPP_URL = "https://wa.me/3322205701";
+
 export default function FloatingWhatsappButton() {
    return (
       <a
-         href="https://wa.me/"
+         href={WHATSAPP_URL}
          target="_blank"
          rel="noopener noreferrer"
-         className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-hicea-pink shadow-lg transition-all duration-300 hover:opacity-80 hover:shadow-2xl md:bottom-8 md:right-8 md:h-16 md:w-16"
+         className="right-6 md:right-8 bottom-6 md:bottom-8 z-50 fixed flex justify-center items-center bg-hicea-pink hover:opacity-80 shadow-lg hover:shadow-2xl rounded-full w-14 md:w-16 h-14 md:h-16 transition-all duration-300"
          title="Contactar por WhatsApp"
       >
          <span className="sr-only">Contactar por WhatsApp</span>
          <svg
-            className="h-6 w-6 md:h-7 md:w-7 text-white"
+            className="w-6 md:w-7 h-6 md:h-7 text-white"
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

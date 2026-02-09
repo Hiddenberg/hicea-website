@@ -3,6 +3,9 @@
 import { MenuIcon, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
+const INSTAGRAM_URL = "https://www.instagram.com/hiceastateresita/";
+const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=61579936680650";
+
 interface MenuItemProps {
    label: string;
    sectionId: string;
@@ -141,7 +144,7 @@ export default function Header() {
                ))}
                <div className="inline space-x-2">
                   <a
-                     href="instagram.com"
+                     href={INSTAGRAM_URL}
                      target="_blank"
                      className="text-white"
                      rel="noopener"
@@ -153,7 +156,7 @@ export default function Header() {
                      />
                   </a>
                   <a
-                     href="facebook.com"
+                     href={FACEBOOK_URL}
                      target="_blank"
                      className="text-white"
                      rel="noopener"
@@ -170,9 +173,8 @@ export default function Header() {
 
          {/* Menu Overlay */}
          <div
-            className={`top-0 left-0 z-40 fixed w-full h-screen bg-linear-to-br from-hicea-purple via-25% via-hicea-purple to-hicea-pink transition-transform duration-300 ease-in-out ${
-               isMenuOpen ? "translate-x-0" : "translate-x-full"
-            }`}
+            className={`top-0 left-0 z-40 fixed w-full h-screen bg-linear-to-br from-hicea-purple via-25% via-hicea-purple to-hicea-pink transition-transform duration-300 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"
+               }`}
          >
             <div className="flex flex-col justify-center items-center gap-6 px-6 pt-20 h-full">
                {/* Logo in menu */}
@@ -218,7 +220,7 @@ export default function Header() {
                   }}
                >
                   <a
-                     href="instagram.com"
+                     href="https://www.instagram.com/hiceastateresita/"
                      target="_blank"
                      rel="noopener noreferrer"
                      className="flex justify-center items-center bg-white/10 hover:bg-white/20 backdrop-blur-sm p-4 border-2 border-white/20 hover:border-white/40 rounded-lg hover:scale-105 active:scale-100 transition-all duration-300"
@@ -230,7 +232,7 @@ export default function Header() {
                      />
                   </a>
                   <a
-                     href="facebook.com"
+                     href={FACEBOOK_URL}
                      target="_blank"
                      rel="noopener noreferrer"
                      className="flex justify-center items-center bg-white/10 hover:bg-white/20 backdrop-blur-sm p-4 border-2 border-white/20 hover:border-white/40 rounded-lg hover:scale-105 active:scale-100 transition-all duration-300"

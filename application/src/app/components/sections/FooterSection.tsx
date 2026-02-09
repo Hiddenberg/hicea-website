@@ -2,6 +2,8 @@
 
 import { ChevronUp } from "lucide-react";
 
+const WHATSAPP_URL = "https://wa.me/3322205701";
+
 export default function FooterSection() {
    const scrollToTop = () => {
       window.scrollTo({
@@ -14,7 +16,7 @@ export default function FooterSection() {
       <div className="flex md:flex-row flex-col justify-between items-center gap-4 md:gap-0 bg-hicea-dark-purple px-4 md:px-10 py-4 md:py-6 w-full">
          {/* WhatsApp Section */}
          <a
-            href="https://wa.me/1234567890"
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 md:gap-3 hover:opacity-80 transition-opacity"
