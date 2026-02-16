@@ -1,10 +1,17 @@
 const WHATSAPP_URL = "https://wa.me/3322205701";
 
 export default function FloatingWhatsappButton() {
+   const handleClick = () => {
+      gtag('event', 'ads_conversion_Contactar_1', {
+         // <event_parameters>
+      });
+   };
+
    return (
       <a
          href={WHATSAPP_URL}
          target="_blank"
+         onClick={() => handleClick()}
          rel="noopener noreferrer"
          className="right-6 md:right-8 bottom-6 md:bottom-8 z-50 fixed flex justify-center items-center bg-hicea-pink hover:opacity-80 shadow-lg hover:shadow-2xl rounded-full w-14 md:w-16 h-14 md:h-16 transition-all duration-300"
          title="Contactar por WhatsApp"

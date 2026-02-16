@@ -12,12 +12,19 @@ export default function FooterSection() {
       });
    };
 
+   const handleWhatsappClick = () => {
+      gtag('event', 'ads_conversion_Contactar_1', {
+         // <event_parameters>
+      });
+   };
+
    return (
       <div className="flex md:flex-row flex-col justify-between items-center gap-4 md:gap-0 bg-hicea-dark-purple px-4 md:px-10 py-4 md:py-6 w-full">
          {/* WhatsApp Section */}
          <a
             href={WHATSAPP_URL}
             target="_blank"
+            onClick={() => handleWhatsappClick()}
             rel="noopener noreferrer"
             className="flex items-center gap-2 md:gap-3 hover:opacity-80 transition-opacity"
          >
