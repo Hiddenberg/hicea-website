@@ -1,3 +1,5 @@
+"use client";
+
 const WHATSAPP_URL = "https://wa.me/3322205701";
 
 export default function FloatingWhatsappButton() {
