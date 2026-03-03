@@ -8,7 +8,11 @@ interface CalendlyWindow extends Window {
    };
 }
 
-export default function CalendlyButton() {
+export default function CalendlyButton({
+   children = "Agenda tu cita",
+}: {
+   children?: React.ReactNode;
+}) {
    const handleClick = () => {
       const calendlyWindow = window as CalendlyWindow;
       if (calendlyWindow.Calendly) {
@@ -27,7 +31,7 @@ export default function CalendlyButton() {
          onClick={() => handleClick()}
          className="hover:scale-110 transition-transform duration-300"
       >
-         Agenda tu cita
+         {children}
       </Button>
    );
 }

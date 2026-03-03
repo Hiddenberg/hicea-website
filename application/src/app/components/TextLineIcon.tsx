@@ -1,4 +1,4 @@
-export default function TextLineIcon({ purple = false }: { purple?: boolean }) {
+export default function TextLineIcon({ className, purple = false }: { className?: string, purple?: boolean }) {
    const source = purple
       ? "/assets/text-line-purple.svg"
       : "/assets/text-line.svg";
@@ -6,7 +6,7 @@ export default function TextLineIcon({ purple = false }: { purple?: boolean }) {
       <img
          src={source}
          alt="Text Line Icon"
-         className="mb-2 w-7 h-auto object-contain"
+         className={`mb-2 w-7 h-auto object-contain ${className}`}
       />
    );
 }
