@@ -69,7 +69,7 @@ function DesktopTabletLayout() {
          <img
             src="/assets/CHICA_CHECKUP.png"
             alt="El autocuidado comienza con prevención"
-            className="w-full max-w-110 h-full object-bottom object-contain"
+            className="self-end w-full max-w-98 h-full object-bottom object-contain"
          />
 
          {/* Content - right side */}
@@ -84,7 +84,7 @@ function DesktopTabletLayout() {
             </h2>
 
             {/* White information card */}
-            <div className="bg-white shadow-[-14px_15px_48px_-12px_#000000] p-6 md:p-8 max-w-xl">
+            <div className="bg-white shadow-[-14px_15px_48px_-12px_#000000] hover:shadow-[0_20px_40px_-12px_rgba(168,85,247,0.25)] p-6 md:p-8 max-w-xl hover:scale-105 transition-all hover:-translate-y-1 duration-300 ease-out">
                <div className="flex items-center gap-6 md:gap-8">
                   <div className="shrink-0">
                      <h3 className="font-bold text-hicea-purple text-3xl uppercase leading-none">
